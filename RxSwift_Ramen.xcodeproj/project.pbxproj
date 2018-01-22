@@ -10,12 +10,14 @@
 		21CC58C40DE47221EBA98A42 /* Pods_RxSwift_Ramen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EECA398381F47BE60726E7 /* Pods_RxSwift_Ramen.framework */; };
 		6B1B86325064251ACC9F1465 /* Pods_RxSwift_RamenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FFC0FF521CCF6353E758CE /* Pods_RxSwift_RamenTests.framework */; };
 		B20E705D2015D1CE003CDB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E705C2015D1CE003CDB85 /* AppDelegate.swift */; };
-		B20E705F2015D1CE003CDB85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E705E2015D1CE003CDB85 /* ViewController.swift */; };
 		B20E70622015D1CE003CDB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20E70602015D1CE003CDB85 /* Main.storyboard */; };
 		B20E70642015D1CE003CDB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20E70632015D1CE003CDB85 /* Assets.xcassets */; };
 		B20E70672015D1CE003CDB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20E70652015D1CE003CDB85 /* LaunchScreen.storyboard */; };
 		B20E70722015D1CF003CDB85 /* RxSwift_RamenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E70712015D1CF003CDB85 /* RxSwift_RamenTests.swift */; };
 		B20E707D2015D1CF003CDB85 /* RxSwift_RamenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E707C2015D1CF003CDB85 /* RxSwift_RamenUITests.swift */; };
+		B20E708B2015D594003CDB85 /* Ramen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E708A2015D594003CDB85 /* Ramen.swift */; };
+		B20E70902015D708003CDB85 /* RamenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E708F2015D708003CDB85 /* RamenPresenter.swift */; };
+		B20E70922015D72E003CDB85 /* RamenListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E70912015D72E003CDB85 /* RamenListController.swift */; };
 		EBFAD54F82924FA251553DCC /* Pods_RxSwift_RamenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEB4674E6F9DAF16F61F19B /* Pods_RxSwift_RamenUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,6 @@
 		997E53E7993C76CDFFC9FAF5 /* Pods-RxSwift_RamenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_RamenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_RamenUITests/Pods-RxSwift_RamenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B20E70592015D1CE003CDB85 /* RxSwift_Ramen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwift_Ramen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20E705C2015D1CE003CDB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B20E705E2015D1CE003CDB85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B20E70612015D1CE003CDB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B20E70632015D1CE003CDB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20E70662015D1CE003CDB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		B20E70782015D1CF003CDB85 /* RxSwift_RamenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwift_RamenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20E707C2015D1CF003CDB85 /* RxSwift_RamenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift_RamenUITests.swift; sourceTree = "<group>"; };
 		B20E707E2015D1CF003CDB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20E708A2015D594003CDB85 /* Ramen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramen.swift; sourceTree = "<group>"; };
+		B20E708F2015D708003CDB85 /* RamenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenPresenter.swift; sourceTree = "<group>"; };
+		B20E70912015D72E003CDB85 /* RamenListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenListController.swift; sourceTree = "<group>"; };
 		C5DAB7B683C1A960FD0EE465 /* Pods-RxSwift_RamenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_RamenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_RamenTests/Pods-RxSwift_RamenTests.release.xcconfig"; sourceTree = "<group>"; };
 		D38B94DB1242B92F21E4C554 /* Pods-RxSwift_Ramen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_Ramen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_Ramen/Pods-RxSwift_Ramen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,8 +131,10 @@
 		B20E705B2015D1CE003CDB85 /* RxSwift_Ramen */ = {
 			isa = PBXGroup;
 			children = (
+				B20E708E2015D6D5003CDB85 /* ViewController */,
+				B20E708D2015D687003CDB85 /* Presenter */,
+				B20E708C2015D59C003CDB85 /* Model */,
 				B20E705C2015D1CE003CDB85 /* AppDelegate.swift */,
-				B20E705E2015D1CE003CDB85 /* ViewController.swift */,
 				B20E70602015D1CE003CDB85 /* Main.storyboard */,
 				B20E70632015D1CE003CDB85 /* Assets.xcassets */,
 				B20E70652015D1CE003CDB85 /* LaunchScreen.storyboard */,
@@ -153,6 +159,30 @@
 				B20E707E2015D1CF003CDB85 /* Info.plist */,
 			);
 			path = RxSwift_RamenUITests;
+			sourceTree = "<group>";
+		};
+		B20E708C2015D59C003CDB85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B20E708A2015D594003CDB85 /* Ramen.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B20E708D2015D687003CDB85 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B20E708F2015D708003CDB85 /* RamenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B20E708E2015D6D5003CDB85 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B20E70912015D72E003CDB85 /* RamenListController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C29C296874860FAA2E32D490 /* Frameworks */ = {
@@ -471,8 +501,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20E705F2015D1CE003CDB85 /* ViewController.swift in Sources */,
 				B20E705D2015D1CE003CDB85 /* AppDelegate.swift in Sources */,
+				B20E708B2015D594003CDB85 /* Ramen.swift in Sources */,
+				B20E70902015D708003CDB85 /* RamenPresenter.swift in Sources */,
+				B20E70922015D72E003CDB85 /* RamenListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
