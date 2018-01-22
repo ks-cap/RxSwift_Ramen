@@ -10,28 +10,27 @@ import UIKit
 //UITableViewやUICollectionViewのDataSourceをRxSwiftで扱う場合はこれが必要（Podfile参照）
 import RxDataSources
 
-class Ramen: UIViewController {
+//ラーメンデータ定義用の構造体(Model層)
+struct Ramen {
+  //取得データに関する定義
+  let name: String
+  let taste: String
+  let imageId: String
+  let image: UIImage?
+  
+  //取得データのイニシャライザ
+  init(name: String, taste: String, imageId: String) {
+    self.name = name
+    self.taste = taste
+    self.imageId = imageId
+    image = UIImage(named: imageId)
+  }
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//既存の独自型(RxDataSourcesで定義されているIdentifiableType型)を拡張する
+extension Ramen: IdentifiableType {
+  typealias Identity = String
+  var identity: Identity {
+    return imageId
+  }
 }

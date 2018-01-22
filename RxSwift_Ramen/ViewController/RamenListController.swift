@@ -11,27 +11,42 @@ import RxSwift
 import RxDataSources
 
 class RamenListController: UIViewController {
+  
+  //監視対象のオブジェクトの一括解放用
+  let disposeBag = DisposeBag()
+  //Presenter層から表示するラーメンデータの取得
+  let ramensData = RamenPresenter()
+  //データソースの定義
+  let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Ramen>>(
+    //データソースを元にしてセルの生成を行う
+    configureCell: {_, tableView, indexPath, ramens in
+      let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+      cell.textLabel?.text = ramens.name
+      cell.detailTextLabel?.text = ramens.taste
+      cell.imageView?.image = ramens.image
+      return cell
+    },
+    //データソースの定義を元にセクションヘッダーを生成する
+    titleForHeaderInSection: { (ds, section: Int) -> String in
+      return ds[section].model
+  }
+  )
+  
+  @IBOutlet weak var ramenTableView: UITableView!
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    //作成したデータと表示するUITableViewをBindして表示する
+    ramensData.ramens.bind(to: ramenTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+    //RxSwiftを利用してUITableViewDelegateを適用する
+    ramenTableView.rx.setDelegate(self).disposed(by: disposeBag)
     
+  }
+  
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension RamenListController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return CGFloat(65)
+  }
 }
