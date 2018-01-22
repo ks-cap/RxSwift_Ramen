@@ -63,10 +63,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="j8n-Lf-C0I" id="q90-yf-tDO"/>
-                                    <outlet property="delegate" destination="j8n-Lf-C0I" id="HvP-fV-Oua"/>
-                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="実装1:ラーメン写真を表示しよう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3b-z8-GJH">
                                 <rect key="frame" x="10" y="84" width="355" height="19.5"/>
