@@ -9,15 +9,15 @@
 import UIKit
 import RxDataSources
 
-//ラーメンデータ定義用の構造体(Model層)
+// ラーメンデータ定義用の構造体(Model層)
 struct Ramen {
-    //取得データに関する定義
+    // 取得データに関する定義
     let name: String
     let taste: String
     let imageId: String
     let image: UIImage?
 
-    //取得データのイニシャライザ
+    // 取得データのイニシャライザ
     init(name: String, taste: String, imageId: String) {
         self.name = name
         self.taste = taste
@@ -26,7 +26,7 @@ struct Ramen {
     }
 }
 
-//既存の独自型(RxDataSourcesで定義されているIdentifiableType型)を拡張する: RxDataSourcesのプロトコル
+// 既存の独自型(RxDataSourcesで定義されているIdentifiableType型)を拡張する: RxDataSourcesのプロトコル
 extension Ramen: IdentifiableType {
     // 一意のIDを設定
     typealias Identity = String
